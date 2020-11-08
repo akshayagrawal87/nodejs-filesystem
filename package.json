@@ -10,5 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshayagrawal87/nodejs-filesystem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akshayagrawal87/nodejs-filesystem/issues"
+  },
+  "homepage": "https://github.com/akshayagrawal87/nodejs-filesystem#readme"
 }
