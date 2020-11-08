@@ -1,3 +1,4 @@
+//IIFE TO GENERATE APIS
 (() => {
 	const express = require("express");
 
@@ -15,6 +16,9 @@
 
 	app
 		.get("/", (req, res) => {
+
+            //API FOR LANDING AND ALL API INFO.
+
 			res
 				.status(200)
 				.send(
@@ -22,6 +26,9 @@
 				);
 		})
 		.get("/createFile", (req, res) => {
+
+            //API FOR CREATING FILES AT A GIVEN LOCATION.
+
 			fs.writeFile(
 				path.join(location, `${new Date()}.txt`),
 				`${new Date()}`,
@@ -35,6 +42,9 @@
 			res.status(200).send(new Date());
 		})
 		.get("/getAllFiles", (req, res) => {
+
+            //API FOR SHOWING ALL FILES CREATED USING CREATE API.
+
 			fs.readdir(location, (err, files) => {
 				res.status(200).send(files);
 				files.forEach((file) => {
