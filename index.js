@@ -8,6 +8,8 @@ const location = "dataBase";
 
 const path = require("path");
 
+const port = process.env.PORT || 4000;
+
 app
 	.get("/createFile", (req, res) => {
 		fs.writeFile(
@@ -22,4 +24,4 @@ app
 		console.log(new Date());
 		res.status(200).send(new Date());
 	})
-	.listen(8001);
+	.listen(port);
